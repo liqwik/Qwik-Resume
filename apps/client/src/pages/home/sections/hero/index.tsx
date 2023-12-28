@@ -28,7 +28,7 @@ export const HeroSection = () => (
           <a
             target="_blank"
             rel="noreferrer"
-            href="https://docs.rxresu.me/overview/features"
+            href="#"
             className={cn(buttonVariants({ variant: "link" }), "space-x-2 text-left")}
           >
             <p>{t`What's new in the latest version`}</p>

@@ -12,16 +12,14 @@ import { useResumeStore } from "@/client/stores/resume";
 import { getSectionIcon } from "../shared/section-icon";
 
 const fontSuggestions = [
-  "Open Sans",
-  "Merriweather",
-  "Roboto Condensed",
-  "Playfair Display",
+  "Khmer",
+  "Battambang",
+  "Siemreap",
+  "Nokora",
+  "Koulen",
+  "Moul",
   "Lato",
-  "Lora",
-  "PT Sans",
-  "PT Serif",
-  "IBM Plex Sans",
-  "IBM Plex Serif",
+  "Open Sans",
 ];
 
 const families: ComboboxOption[] = fonts.map((font) => ({

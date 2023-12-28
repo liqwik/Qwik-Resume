@@ -34,7 +34,7 @@ services:
       MINIO_ROOT_PASSWORD: minioadmin
     labels:
       - traefik.enable=true
-      - traefik.http.routers.storage.rule=Host(`storage.example.com`)
+      - traefik.http.routers.storage.rule=Host(`storage.quiclabs.com`)
       - traefik.http.services.storage.loadbalancer.server.port=9000
 
   # Chrome Browser (for printing and previews)
@@ -47,7 +47,7 @@ services:
       PRE_REQUEST_HEALTH_CHECK: true
     labels:
       - traefik.enable=true
-      - traefik.http.routers.printer.rule=Host(`printer.example.com`)
+      - traefik.http.routers.printer.rule=Host(`printer.quiclabs.com`)
       - traefik.http.services.printer.loadbalancer.server.port=3000
 
   # Redis (for cache & server session management)
@@ -57,7 +57,7 @@ services:
     command: redis-server --requirepass password
 
   app:
-    image: amruthpillai/reactive-resume:latest
+    image: liqwik/qwik-resume:v1.0.0
     restart: unless-stopped
     depends_on:
       - postgres
@@ -70,8 +70,8 @@ services:
       NODE_ENV: production
 
       # -- URLs --
-      PUBLIC_URL: http://example.com
-      STORAGE_URL: http://storage.example.com
+      PUBLIC_URL: http://instares.quiclabs.com
+      STORAGE_URL: http://storage.quiclabs.com/default
 
       # -- Printer (Chrome) --
       CHROME_TOKEN: chrome_token
@@ -122,7 +122,7 @@ services:
       GOOGLE_CALLBACK_URL: http://example.com/api/auth/google/callback
     labels:
       - traefik.enable=true
-      - traefik.http.routers.app.rule=Host(`example.com`)
+      - traefik.http.routers.app.rule=Host(`instares.quiclabs.com`)
       - traefik.http.services.app.loadbalancer.server.port=3000
 
   traefik:

@@ -150,7 +150,7 @@ export class AuthService {
     });
 
     const url = `${this.utils.getUrl()}/auth/reset-password?token=${token}`;
-    const subject = "Reset your Reactive Resume password";
+    const subject = "Reset your Insta Resume password";
     const text = `Please click on the link below to reset your password:\n\n${url}`;
 
     await this.mailService.sendEmail({ to: email, subject, text });

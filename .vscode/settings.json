@@ -10,5 +10,8 @@
       "tools/compose/*"
     ]
   },
-  "i18n-ally.localesPaths": ["apps/client/src/locales"]
+  "i18n-ally.localesPaths": [
+    "apps/client/src/locales"
+  ],
+  "svg.preview.background": "white"
 }

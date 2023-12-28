@@ -16,7 +16,7 @@ export const ProductHuntBanner = () => {
   if (!isLaunchDay) return null;
 
   return (
-    <a href="https://www.producthunt.com/posts/reactive-resume-v4" target="_blank" rel="noreferrer">
+    <a href="#" target="_blank" rel="noreferrer">
       <motion.div
         initial={{ opacity: 0, y: -50, height: 32 }}
         animate={{ opacity: 1, y: 0, transition: { delay: 0.9, duration: 0.3 } }}
@@ -24,7 +24,7 @@ export const ProductHuntBanner = () => {
         className="flex w-screen items-center justify-center gap-x-1.5 bg-orange-600 text-xs font-bold leading-relaxed text-orange-50"
       >
         <RocketLaunch weight="bold" size={12} />
-        <span>Support Reactive Resume on Product Hunt today!</span>
+        <span>Support Insta Resume on Product Hunt today!</span>
       </motion.div>
     </a>
   );
